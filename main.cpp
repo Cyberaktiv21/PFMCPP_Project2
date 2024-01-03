@@ -66,11 +66,12 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
  */
 
 // 2)
-void variableDeclarations() {
+void variableDeclarations() 
+{
   // example:
   // int number = 2; //declaration of a variable named "number", that uses the
   // primitive type 'int', and the variable's initial value is '2'
-
+  
   int age = 20;
   int count = 0;
   int rollNumber = 21;
@@ -87,10 +88,8 @@ void variableDeclarations() {
   double defVal = 33.9836;
   double balance = 399.99;
 
-  ignoreUnused(
-      age, count, rollNumber, price, temperature, weight, isStudent, isHungry,
-      isSick, pi, defVal,
-      balance); // passing each variable declared to the ignoreUnused() function
+  ignoreUnused(age, count, rollNumber, price, temperature, weight, isStudent, isHungry, isSick, pi, defVal, balance);
+    //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -109,59 +108,70 @@ void variableDeclarations() {
 //}
 
 // 1
-bool carVal(int rentalDuration, int carType = 0) {
+bool carVal(int rentalDuration, int carType = 0) 
+{
   ignoreUnused(rentalDuration, carType);
   return {};
 }
 
 // 2
-int calculateSum(int a, int b) {
+int calculateSum(int a, int b)
+{
   ignoreUnused(a, b);
   return {};
 }
 
 // 3
-double computeAverage(double firstNumber, double secondNumber,
-                      double thirdNumber = 0.0) {
+double computeAverage(double firstNumber, double secondNumber, double thirdNumber = 0.0) 
+{
   ignoreUnused(firstNumber, secondNumber, thirdNumber);
   return {};
 }
 
 // 4
-float updateTemperature(float currentTemperature, float adjustment = 0.0f) {
+float updateTemperature(float currentTemperature, float adjustment = 0.0f) 
+{
   ignoreUnused(currentTemperature, adjustment);
   return {};
 }
 
 // 5
-int addNumbers(int num1, int num2, int num3 = 0, int num4 = 0) {
+int addNumbers(int num1, int num2, int num3 = 0, int num4 = 0) 
+{
   ignoreUnused(num1, num2, num3, num4);
   return {};
 }
 
 // 6
-double calculateDistance(double x1, double y1, double x2, double y2) {
+double calculateDistance(double x1, double y1, double x2, double y2) 
+{
   ignoreUnused(x1, y1, x2, y2);
   return {};
 }
 
 // 7
-void processInput(int input) { ignoreUnused(input); }
+void processInput(int input)
+{ 
+    ignoreUnused(input); 
+}
 
 // 8
-bool sayYesOrNo(bool yesOrNo) {
+bool sayYesOrNo(bool yesOrNo) 
+{
   ignoreUnused(yesOrNo);
   return {};
 }
 
 // 9
-float calculateTax(int income, int taxBracket = 0) {
+float calculateTax(int income, int taxBracket = 0) 
+{
   ignoreUnused(income, taxBracket);
   return {};
 }
 
 // 10
-int findRank(int numberOfPlayers, int numberOfTeams) {
+int findRank(int numberOfPlayers, int numberOfTeams)
+{
   ignoreUnused(numberOfPlayers, numberOfTeams);
   return {};
 }
@@ -182,7 +192,8 @@ int findRank(int numberOfPlayers, int numberOfTeams) {
  Wait for my code review.
  */
 
-int main() {
+int main() 
+{
   // example of calling that function, storing the value, and passing it to
   // ignoreUnused at the end of main()
 
