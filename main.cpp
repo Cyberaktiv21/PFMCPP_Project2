@@ -68,27 +68,27 @@ the 'auto' keyword. c) pass the local variables to ignoreUnused() as you did in
 // 2)
 void variableDeclarations() 
 {
-  // example:
-  // int number = 2; //declaration of a variable named "number", that uses the
-  // primitive type 'int', and the variable's initial value is '2'
-  
-  int age = 20;
-  int count = 0;
-  int rollNumber = 21;
-
-  float price = 23.47f;
-  float temperature = 36.5f;
-  float weight = 52.7f;
-
-  bool isStudent = true;
-  bool isHungry = false;
-  bool isSick = true;
-
-  double pi = 3.14;
-  double defVal = 33.9836;
-  double balance = 399.99;
-
-  ignoreUnused(age, count, rollNumber, price, temperature, weight, isStudent, isHungry, isSick, pi, defVal, balance);
+    // example:
+    int number = 2; //declaration of a variable named "number", that uses the
+    // primitive type 'int', and the variable's initial value is '2'
+    
+    int age = 20;
+    int count = 0;
+    int rollNumber = 21;
+    
+    float price = 23.47f;
+    float temperature = 36.5f;
+    float weight = 52.7f;
+    
+    bool isStudent = true;
+    bool isHungry = false;
+    bool isSick = true;
+    
+    double pi = 3.14;
+    double defVal = 33.9836;
+    double balance = 399.99;
+    
+    ignoreUnused(number, age, count, rollNumber, price, temperature, weight, isStudent, isHungry, isSick, pi, defVal, balance);
     //passing each variable declared to the ignoreUnused() function
 }
 
@@ -110,43 +110,43 @@ void variableDeclarations()
 // 1
 bool carVal(int rentalDuration, int carType = 0) 
 {
-  ignoreUnused(rentalDuration, carType);
-  return {};
+    ignoreUnused(rentalDuration, carType);
+    return {};
 }
 
 // 2
 int calculateSum(int a, int b)
 {
-  ignoreUnused(a, b);
-  return {};
+    ignoreUnused(a, b);
+    return {};
 }
 
 // 3
 double computeAverage(double firstNumber, double secondNumber, double thirdNumber = 0.0) 
 {
-  ignoreUnused(firstNumber, secondNumber, thirdNumber);
-  return {};
+    ignoreUnused(firstNumber, secondNumber, thirdNumber);
+    return {};
 }
 
 // 4
 float updateTemperature(float currentTemperature, float adjustment = 0.0f) 
 {
-  ignoreUnused(currentTemperature, adjustment);
-  return {};
+    ignoreUnused(currentTemperature, adjustment);
+    return {};
 }
 
 // 5
 int addNumbers(int num1, int num2, int num3 = 0, int num4 = 0) 
 {
-  ignoreUnused(num1, num2, num3, num4);
-  return {};
+    ignoreUnused(num1, num2, num3, num4);
+    return {};
 }
 
 // 6
 double calculateDistance(double x1, double y1, double x2, double y2) 
 {
-  ignoreUnused(x1, y1, x2, y2);
-  return {};
+    ignoreUnused(x1, y1, x2, y2);
+    return {};
 }
 
 // 7
@@ -158,22 +158,22 @@ void processInput(int input)
 // 8
 bool sayYesOrNo(bool yesOrNo) 
 {
-  ignoreUnused(yesOrNo);
-  return {};
+    ignoreUnused(yesOrNo);
+    return {};
 }
 
 // 9
 float calculateTax(int income, int taxBracket = 0) 
 {
-  ignoreUnused(income, taxBracket);
-  return {};
+    ignoreUnused(income, taxBracket);
+    return {};
 }
 
 // 10
 int findRank(int numberOfPlayers, int numberOfTeams)
 {
-  ignoreUnused(numberOfPlayers, numberOfTeams);
-  return {};
+    ignoreUnused(numberOfPlayers, numberOfTeams);
+    return {};
 }
 
 /*
@@ -197,19 +197,19 @@ int main()
   // example of calling that function, storing the value, and passing it to
   // ignoreUnused at the end of main()
 
-  auto rented = carVal(5, 1);
-  auto sum = calculateSum(10, 20);
-  auto average = computeAverage(4.5, 5.5);
-  auto updatedTemp = updateTemperature(22.5f, 1.0f);
-  auto sumNumbers = addNumbers(1, 2, 3);
-  auto distance = calculateDistance(0.0, 0.0, 3.0, 4.0);
-  processInput(5);
-  auto decision = sayYesOrNo(true);
-  auto tax = calculateTax(50000, 1);
-  auto rank = findRank(10, 2);
-
-  ignoreUnused(rented, sum, average, updatedTemp, sumNumbers, distance,
+    auto rented = carVal(5, 1);
+    auto sum = calculateSum(10, 20);
+    auto average = computeAverage(4.5, 5.5);
+    auto updatedTemp = updateTemperature(22.5f, 1.0f);
+    auto sumNumbers = addNumbers(1, 2, 3);
+    auto distance = calculateDistance(0.0, 0.0, 3.0, 4.0);
+    processInput(5);
+    auto decision = sayYesOrNo(true);
+    auto tax = calculateTax(50000, 1);
+    auto rank = findRank(10, 2);
+    
+    ignoreUnused(rented, sum, average, updatedTemp, sumNumbers, distance,
                decision, tax, rank);
-  std::cout << "good to go!" << std::endl;
-  return 0;
+    std::cout << "good to go!" << std::endl;
+    return 0;
 }
